@@ -76,10 +76,11 @@ def tiktok_dl(client, message):
     #Using the default one can stop working any moment 
     
     api = f"https://tiktok-info.p.rapidapi.com/dl/"
-    r = requests.get(api, params=params, headers=headers).json()['videoLinks']['download']
+    request = requests.get(api, params=params, headers=headers)
+    r = request.json()['videoLinks']['download']
     directory = str(round(time.time()))
     filename = str(int(time.time()))+'.mp4'
-    size = int(r.headers['content-length'])
+    size = int(request.headers['content-length'])
     total_size = "{:.2f}".format(int(size) / 1048576)
     try:
         os.mkdir(directory)
