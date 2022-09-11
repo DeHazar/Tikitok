@@ -69,7 +69,7 @@ def tiktok_dl(client, message):
     }
     headers = {
       'x-rapidapi-host': "tiktok-info.p.rapidapi.com",
-      'x-rapidapi-key': "f9d65af755msh3c8cac23b52a5eep108a33jsnbf7de971bb72"
+      'x-rapidapi-key': "fc4bb079c4msh549914e2b6707a8p1ed812jsn6776155b43a2"
     }
     
     ### Get your Free TikTok API from https://rapidapi.com/TerminalWarlord/api/tiktok-info/
