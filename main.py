@@ -78,10 +78,7 @@ def tiktok_dl(client, message):
     filename = str(int(time.time()))+'.mp4'
     size = int(request.headers['content-length'])
     total_size = "{:.2f}".format(int(size) / 1048576)
-    app.send_message(chat_id=message.from_user.id, text=f"Ссылка на видео:\n\n"
-                     r,
-                     parse_mode='md',
-                     reply_markup=reply_markup)
+    a = app.send_message(chat_id=message.chat.id, text=r)
     # try:
     #     os.mkdir(directory)
     # except:
